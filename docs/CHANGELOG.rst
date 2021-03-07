@@ -2,6 +2,381 @@
 Changelog
 =========
 
+`1.8.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.7.5...v1.8.0>`_ (2021-03-03)
+------------------------------------------------------------------------------------------------------
+
+Features
+^^^^^^^^
+
+
+* allow selecting alternate salt package repositories (\ `8742ab3 <https://github.com/saltstack-formulas/salt-formula/commit/8742ab30bb951cb28b3b527693aab9f6439b76f6>`_\ )
+
+Tests
+^^^^^
+
+
+* **debian+ubuntu:** update ``pkgrepo`` to use ``https`` instead of ``http`` (\ `e94a8c9 <https://github.com/saltstack-formulas/salt-formula/commit/e94a8c9dcec9c1643d655859de58eebb5d1eab81>`_\ )
+
+`1.7.5 <https://github.com/saltstack-formulas/salt-formula/compare/v1.7.4...v1.7.5>`_ (2021-03-02)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* revert to using ``is mapping`` in Jinja2 (\ `a89fb3f <https://github.com/saltstack-formulas/salt-formula/commit/a89fb3f4aa819ae4767a7818018d292e2b6633df>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gemfile+lock:** use ``ssf`` customised ``kitchen-docker`` repo [skip ci] (\ `25fea89 <https://github.com/saltstack-formulas/salt-formula/commit/25fea89238d0fc453af9679cb364bcdcc2c7f1e0>`_\ )
+* **kitchen+gitlab-ci:** use latest pre-salted images [skip ci] (\ `fb9901e <https://github.com/saltstack-formulas/salt-formula/commit/fb9901e3acd334fc91f21abab4089a53977f6061>`_\ )
+* **pre-commit:** update hook for ``rubocop`` [skip ci] (\ `a874a76 <https://github.com/saltstack-formulas/salt-formula/commit/a874a76967b30426ec8ff9ccae8cb3801682cbcb>`_\ )
+
+`1.7.4 <https://github.com/saltstack-formulas/salt-formula/compare/v1.7.3...v1.7.4>`_ (2021-01-29)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **osfamilymap:** update openSUSE ``pkgrepo`` URLs (\ `48f8da0 <https://github.com/saltstack-formulas/salt-formula/commit/48f8da03574d85b27ef9692eb631b893ee047525>`_\ )
+* **pkgrepo/suse/install:** avoid managing repo if it already exists (\ `d5320a3 <https://github.com/saltstack-formulas/salt-formula/commit/d5320a35edfbaa44c769bf73036b1bee7581cab5>`_\ ), closes `/github.com/saltstack/salt/blob/45cc49daed1618dbe89e1f012128c8dcab00b356/salt/modules/zypperpkg.py#L1262-L1265 <https://github.com//github.com/saltstack/salt/blob/45cc49daed1618dbe89e1f012128c8dcab00b356/salt/modules/zypperpkg.py/issues/L1262-L1265>`_
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+gitlab:** update for new pre-salted images (\ `a9413e8 <https://github.com/saltstack-formulas/salt-formula/commit/a9413e8c29ba456cd1cbb58b5b028c77d707cf30>`_\ )
+
+Tests
+^^^^^
+
+
+* **tumbleweed:** add map verification files (\ `6aeaa5a <https://github.com/saltstack-formulas/salt-formula/commit/6aeaa5ac941e0845c5af1f247100e52e354d545c>`_\ )
+
+`1.7.3 <https://github.com/saltstack-formulas/salt-formula/compare/v1.7.2...v1.7.3>`_ (2020-12-23)
+------------------------------------------------------------------------------------------------------
+
+Tests
+^^^^^
+
+
+* **_mapdata:** generate verification files (\ `da6d150 <https://github.com/saltstack-formulas/salt-formula/commit/da6d1509fd12029edaf907f887071e3604aa0a0a>`_\ )
+* **map:** verify ``map.jinja`` dump using ``_mapdata`` state (\ `d2404d5 <https://github.com/saltstack-formulas/salt-formula/commit/d2404d5175bdc01f532032c82a4891e2f5d070cc>`_\ )
+
+`1.7.2 <https://github.com/saltstack-formulas/salt-formula/compare/v1.7.1...v1.7.2>`_ (2020-12-20)
+------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **commitlint:** ensure ``upstream/master`` uses main repo URL [skip ci] (\ `2a5b679 <https://github.com/saltstack-formulas/salt-formula/commit/2a5b6798d4a0c31f74d849f3f9df13a9cf29b9da>`_\ )
+* **gitlab-ci:** add ``rubocop`` linter (with ``allow_failure``\ ) [skip ci] (\ `8417653 <https://github.com/saltstack-formulas/salt-formula/commit/8417653525c62e30493b2788e0c9ab6224ffe4af>`_\ )
+* **kitchen+gitlab:** adjust matrix to add ``3002`` (\ `7df2445 <https://github.com/saltstack-formulas/salt-formula/commit/7df24454812c6bbd48a9c07c877efba4df194852>`_\ )
+
+Tests
+^^^^^
+
+
+* **magnesium:** add pillar and tests for ``3002`` (\ `c066060 <https://github.com/saltstack-formulas/salt-formula/commit/c0660608d7780483f0c1ebdd57b0873c3d62cb56>`_\ )
+
+`1.7.1 <https://github.com/saltstack-formulas/salt-formula/compare/v1.7.0...v1.7.1>`_ (2020-12-16)
+------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gitlab-ci:** use GitLab CI as Travis CI replacement (\ `c9b2cb4 <https://github.com/saltstack-formulas/salt-formula/commit/c9b2cb4a4a3562b80c84450284fdfa818d3620bc>`_\ )
+
+Tests
+^^^^^
+
+
+* **fluorine:** remove pillar and tests for ``2019.2`` (\ `75ccf59 <https://github.com/saltstack-formulas/salt-formula/commit/75ccf591eb20567464a306616e13c5d473af0b4e>`_\ )
+* **pkgs_spec:** test for major version only (i.e. ``3000``\ ) (\ `618f95a <https://github.com/saltstack-formulas/salt-formula/commit/618f95a6653adab4c7121cddd13ea2d128b337a4>`_\ )
+
+`1.7.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.6.0...v1.7.0>`_ (2020-10-12)
+------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **pre-commit:** add to formula [skip ci] (\ `7ff962e <https://github.com/saltstack-formulas/salt-formula/commit/7ff962e2addd97e84dd99c87351b1412f64134af>`_\ )
+* **pre-commit:** enable/disable ``rstcheck`` as relevant [skip ci] (\ `426b29c <https://github.com/saltstack-formulas/salt-formula/commit/426b29c21149f5cef9064177177891a091c6bb82>`_\ )
+* **pre-commit:** finalise ``rstcheck`` configuration [skip ci] (\ `22fa616 <https://github.com/saltstack-formulas/salt-formula/commit/22fa616f59864a77e3f7ea5b17e8a7f0bcf415be>`_\ )
+
+Features
+^^^^^^^^
+
+
+* add Gentoo support (\ `127c5d7 <https://github.com/saltstack-formulas/salt-formula/commit/127c5d779b1e2b9beb7322a2d03a027c50e5c6d7>`_\ )
+
+`1.6.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.5.2...v1.6.0>`_ (2020-09-20)
+------------------------------------------------------------------------------------------------------
+
+Features
+^^^^^^^^
+
+
+* enable the metadata grains server by default (\ `b1d296d <https://github.com/saltstack-formulas/salt-formula/commit/b1d296d270d3cc06332f569f81ee95fc78d95596>`_\ )
+
+`1.5.2 <https://github.com/saltstack-formulas/salt-formula/compare/v1.5.1...v1.5.2>`_ (2020-09-20)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **jinja:** stop repeating user/group args (\ `e313401 <https://github.com/saltstack-formulas/salt-formula/commit/e313401cd657a77a3624ed372c8e22e905c2d172>`_\ )
+* **windows:** dont run master state (\ `a36f2eb <https://github.com/saltstack-formulas/salt-formula/commit/a36f2eb2d2ab4e3d57885177f3438037b15318e3>`_\ )
+* **windows:** git.latest(parallel:true) does not work (\ `0c591bb <https://github.com/saltstack-formulas/salt-formula/commit/0c591bba95cebd341e73cdd0fc986428ee34ce7e>`_\ )
+* **windows:** group arg not supported on windows (\ `d61e671 <https://github.com/saltstack-formulas/salt-formula/commit/d61e671fa0de58fe60c5c0cdc23d55c49b93dd01>`_\ )
+* **windows:** group name is users not root (\ `887d155 <https://github.com/saltstack-formulas/salt-formula/commit/887d1559b5496dd07e730390f4309568d0428c2f>`_\ )
+
+`1.5.1 <https://github.com/saltstack-formulas/salt-formula/compare/v1.5.0...v1.5.1>`_ (2020-08-25)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **service:** service salt-master and salt-minion to restart last (\ `d71cf0c <https://github.com/saltstack-formulas/salt-formula/commit/d71cf0c4f9ba716b93b784993f0409337e60fa18>`_\ )
+* **service:** svc ``salt-master`` watch ``remove-default-master-conf-file`` (\ `e1774e3 <https://github.com/saltstack-formulas/salt-formula/commit/e1774e3b40c54b554552ecf34508c1bcbf5ffbd1>`_\ )
+
+Styles
+^^^^^^
+
+
+* **libtofs.jinja:** use Black-inspired Jinja formatting [skip ci] (\ `76e820c <https://github.com/saltstack-formulas/salt-formula/commit/76e820c36f6f0ea712001285dd79cbd5b54489e8>`_\ )
+
+`1.5.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.6...v1.5.0>`_ (2020-07-15)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **macos:** use macos service names (\ `c72b183 <https://github.com/saltstack-formulas/salt-formula/commit/c72b183f5ff885b30f0ac0fff8c9a847333a9304>`_\ )
+* **minion:** fix requisites from recent prs (\ `a466456 <https://github.com/saltstack-formulas/salt-formula/commit/a46645607b3e20cf2f69a51e976457c201830c4c>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **macos:** basic launchctl service support (\ `94027f7 <https://github.com/saltstack-formulas/salt-formula/commit/94027f7332093764553162d9e80074029647f7ef>`_\ )
+
+Tests
+^^^^^
+
+
+* **versions:** bump pkg versions (\ `37eb3b3 <https://github.com/saltstack-formulas/salt-formula/commit/37eb3b35141885fe16ddc59d0ba45b29dbd5babe>`_\ )
+
+`1.4.6 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.5...v1.4.6>`_ (2020-07-01)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **freebsd:** command ``at`` is already present in base system (\ `b6ab1b1 <https://github.com/saltstack-formulas/salt-formula/commit/b6ab1b1d543908ea050cdb928a255dd4e2a3384d>`_\ )
+
+`1.4.5 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.4...v1.4.5>`_ (2020-06-28)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **windows:** ``py2`` should still be default like other platforms (\ `62f6d39 <https://github.com/saltstack-formulas/salt-formula/commit/62f6d39d63cc2e5c134571e20518f7da8c17e09e>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **github:** add Windows testing using Actions (\ `1eca9c7 <https://github.com/saltstack-formulas/salt-formula/commit/1eca9c75519d9ad97dc6526fa83a56477da16579>`_\ )
+
+Tests
+^^^^^
+
+
+* **windows:** add local testing of Windows using Vagrant/Virtualbox (\ `0465af7 <https://github.com/saltstack-formulas/salt-formula/commit/0465af72dac6d8609f918ce32796c91157422358>`_\ )
+
+`1.4.4 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.3...v1.4.4>`_ (2020-06-23)
+------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen:** use ``saltimages`` Docker Hub where available [skip ci] (\ `f66a09c <https://github.com/saltstack-formulas/salt-formula/commit/f66a09c2d69bf676113be9073cd365860e8548a3>`_\ )
+* **kitchen+travis:** adjust matrix to add ``3001`` (\ `9060879 <https://github.com/saltstack-formulas/salt-formula/commit/90608799249147f8c0d9e3189b865d8999dc4e5f>`_\ )
+
+Tests
+^^^^^
+
+
+* **sodium:** add pillar and tests for ``3001`` (\ `42cacc2 <https://github.com/saltstack-formulas/salt-formula/commit/42cacc253f9f0fbf1411ac19f9dc4169aef5d3f5>`_\ )
+
+`1.4.3 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.2...v1.4.3>`_ (2020-06-01)
+------------------------------------------------------------------------------------------------------
+
+Tests
+^^^^^
+
+
+* **pkgs_spec:** simplify using ``match`` (trigger: update for ``suse``\ ) (\ `b2b1fee <https://github.com/saltstack-formulas/salt-formula/commit/b2b1fee370060c82101526157dc2630a4453dfb8>`_\ ), closes `/travis-ci.org/github/myii/salt-formula/jobs/692337807#L2366-L2381 <https://github.com//travis-ci.org/github/myii/salt-formula/jobs/692337807/issues/L2366-L2381>`_
+
+`1.4.2 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.1...v1.4.2>`_ (2020-05-26)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **opensuse:** use appropriate upstream repo (\ `5d9a92b <https://github.com/saltstack-formulas/salt-formula/commit/5d9a92bf1d567cf25916239c2b11828fe625fd17>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+travis:** adjust matrix to add ``3000.3`` [skip ci] (\ `a333801 <https://github.com/saltstack-formulas/salt-formula/commit/a3338018fbf0f770c41a6523473eb42123daa435>`_\ )
+* **kitchen+travis:** adjust matrix to add ``opensuse-leap-15.2`` (\ `7fc32fb <https://github.com/saltstack-formulas/salt-formula/commit/7fc32fb0fb739a713c58d1642cd206106270322e>`_\ )
+* **kitchen+travis:** adjust matrix to add ``opensuse-leap-15.2`` (\ `1afa84e <https://github.com/saltstack-formulas/salt-formula/commit/1afa84e1af2132763b6dbdaff98892dd35bf9f1c>`_\ )
+* **travis:** add notifications => zulip [skip ci] (\ `7e2a9c0 <https://github.com/saltstack-formulas/salt-formula/commit/7e2a9c0acd8dff358cfb80a14eaa596e3abf3e60>`_\ )
+* **workflows/commitlint:** add to repo [skip ci] (\ `38ebe56 <https://github.com/saltstack-formulas/salt-formula/commit/38ebe5653b72fb5b9e11fdeef9c8f394600bd2ff>`_\ )
+
+Tests
+^^^^^
+
+
+* **pkgs_spec:** update for releases ``3000.3`` & ``2019.2.5`` (\ `5917569 <https://github.com/saltstack-formulas/salt-formula/commit/591756946403d17228a59b46ab48f6d1985743e2>`_\ )
+* **pkgs_spec:** update version installed on ``fedora`` (\ `301a988 <https://github.com/saltstack-formulas/salt-formula/commit/301a9884ac0159ead8324b6ab4eaa170943b92f8>`_\ )
+
+`1.4.1 <https://github.com/saltstack-formulas/salt-formula/compare/v1.4.0...v1.4.1>`_ (2020-05-02)
+------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gemfile.lock:** add to repo with updated ``Gemfile`` [skip ci] (\ `f10a85f <https://github.com/saltstack-formulas/salt-formula/commit/f10a85fc706aeba06453234b02bb5d8b0f00ad34>`_\ )
+* **kitchen+travis:** adjust matrix to add ``3000.2`` & remove ``2018.3`` (\ `433a2c1 <https://github.com/saltstack-formulas/salt-formula/commit/433a2c1597fca67762cc41617d1a4056b6b6adc3>`_\ )
+
+Tests
+^^^^^
+
+
+* add tests for ``v3000-py2`` (\ `c228029 <https://github.com/saltstack-formulas/salt-formula/commit/c228029879f36ee5aaa5f3cd3d3684ede29808bb>`_\ )
+* **pkgs_spec:** update for CVE releases ``3000.2`` & ``2019.2.4`` (\ `965588b <https://github.com/saltstack-formulas/salt-formula/commit/965588b10808dea7dcf13fa651c95f61f2e4f83b>`_\ )
+* remove deprecated Salt/Python versions (\ `7f19796 <https://github.com/saltstack-formulas/salt-formula/commit/7f19796517e920d0b1773b22724c68d5a8de681b>`_\ )
+
+`1.4.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.3.4...v1.4.0>`_ (2020-04-18)
+------------------------------------------------------------------------------------------------------
+
+Features
+^^^^^^^^
+
+
+* **package:** use apt-pinning to pin specific package version (\ `98ad87a <https://github.com/saltstack-formulas/salt-formula/commit/98ad87a0014114f79fde1854dfb3731fad772ac4>`_\ )
+
+Tests
+^^^^^
+
+
+* **pkgs_spec:** update ``fedora`` version [skip ci] (\ `e786eb6 <https://github.com/saltstack-formulas/salt-formula/commit/e786eb6b8e8e3892046f6d56e719e119b16591b7>`_\ )
+
+`1.3.4 <https://github.com/saltstack-formulas/salt-formula/compare/v1.3.3...v1.3.4>`_ (2020-04-03)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **api:** remove spurious colon in salt.api state (\ `02fbcd4 <https://github.com/saltstack-formulas/salt-formula/commit/02fbcd43fc56e99fa62d7ab78658fa19e5d83372>`_\ )
+
+`1.3.3 <https://github.com/saltstack-formulas/salt-formula/compare/v1.3.2...v1.3.3>`_ (2020-04-01)
+------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+travis:** adjust matrix to update ``3000`` to ``3000.1`` (\ `a8fe65a <https://github.com/saltstack-formulas/salt-formula/commit/a8fe65a2c80a63cb167ea6f7f88b1198b6e07b97>`_\ )
+
+Tests
+^^^^^
+
+
+* **pkgs_spec:** update ``3000`` to ``3000.1`` (\ `1e677cd <https://github.com/saltstack-formulas/salt-formula/commit/1e677cd761ab82ff6160d7b96ce7f6920b2e02e4>`_\ )
+* **service_spec:** add ``should be_installed`` (\ `b5461a0 <https://github.com/saltstack-formulas/salt-formula/commit/b5461a0ebab63fb77186ea5960e71bd1426609a1>`_\ )
+
+`1.3.2 <https://github.com/saltstack-formulas/salt-formula/compare/v1.3.1...v1.3.2>`_ (2020-03-21)
+------------------------------------------------------------------------------------------------------
+
+Code Refactoring
+^^^^^^^^^^^^^^^^
+
+
+* **osfamilymap:** remove workaround for OpenSUSE 15.1 (\ `0da366c <https://github.com/saltstack-formulas/salt-formula/commit/0da366c7b25778dcec12f2a4a80cd4072c3d4d29>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+travis:** adjust matrix to add ``3000`` & remove ``2017.7`` (\ `4a5f805 <https://github.com/saltstack-formulas/salt-formula/commit/4a5f8053e938569814a2043405416c74b8c990fd>`_\ )
+
+Tests
+^^^^^
+
+
+* **neon:** add pillar and tests for ``3000`` (\ `f91f10c <https://github.com/saltstack-formulas/salt-formula/commit/f91f10c2800edfc1b59fd731a6b6f82a47f74fcc>`_\ )
+* **nitrogen:** remove pillar and tests for ``2017.7`` (\ `f246a5e <https://github.com/saltstack-formulas/salt-formula/commit/f246a5e0af84f527df2f87428d929440c716361b>`_\ )
+
+`1.3.1 <https://github.com/saltstack-formulas/salt-formula/compare/v1.3.0...v1.3.1>`_ (2020-03-19)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **jinja:** replace version_cmp with grains lookup (\ `dd37869 <https://github.com/saltstack-formulas/salt-formula/commit/dd37869d2842927a87273b940fd76945ff6a05ec>`_\ )
+* **jinja:** replace version_cmp with grains lookup (\ `325f6c0 <https://github.com/saltstack-formulas/salt-formula/commit/325f6c061beb2721cb55777e206922d728f62e69>`_\ )
+
+`1.3.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.2.0...v1.3.0>`_ (2020-03-11)
+------------------------------------------------------------------------------------------------------
+
+Features
+^^^^^^^^
+
+
+* **mapping:** better control of the service's state (\ `29ffd68 <https://github.com/saltstack-formulas/salt-formula/commit/29ffd68d3419b61b938221130911844f48134817>`_\ )
+
+`1.2.0 <https://github.com/saltstack-formulas/salt-formula/compare/v1.1.3...v1.2.0>`_ (2020-02-20)
+------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **libtofs:** “files_switch” mess up the variable exported by “map.jinja” [skip ci] (\ `4955737 <https://github.com/saltstack-formulas/salt-formula/commit/4955737f844678ca3ca208340fe73fcd47aab256>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+travis+inspec:** fix ``amazonlinux-2-py3`` [skip ci] (\ `10e2ce0 <https://github.com/saltstack-formulas/salt-formula/commit/10e2ce07a4293ad46d785bcbc16b822280f17142>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **metastate:** add metastate per community convention (\ `fbaa456 <https://github.com/saltstack-formulas/salt-formula/commit/fbaa456ca69fafa2a8a4ef910b5e09dafffe5ece>`_\ )
+
 `1.1.3 <https://github.com/saltstack-formulas/salt-formula/compare/v1.1.2...v1.1.3>`_ (2020-02-13)
 ------------------------------------------------------------------------------------------------------
 
